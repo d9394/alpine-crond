@@ -58,7 +58,7 @@ RUN apk del build-dependencies
 
 WORKDIR /Script
 
-#CMD ["echo", "-e", "\"t1st-pwd\"", "|", "sudo", "-S", "/usr/sbin/crond","-f","-c","/var/spool/cron/crontabs","-L","/logs/cron.log","&&", "ping", "-t", "127.0.0.1"]
+#CMD ["echo", "-e", "\"test\"", "|", "sudo", "-S", "/usr/sbin/crond","-f","-c","/var/spool/cron/crontabs","-L","/logs/cron.log","&&", "ping", "-t", "127.0.0.1"]
 
 COPY ./init.sh /
 RUN chmod 755 /init.sh
